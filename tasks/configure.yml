@@ -40,10 +40,10 @@
     - supervisor-configure-configuration
     - supervisor-configure-configuration-supervisord-conf
 
-- name: configure | update init script - /etc/init.d/supervisor
+- name: configure | update upstart script - /etc/init/supervisor.conf
   template:
-    src: etc/init.d/supervisor.j2
-    dest: /etc/init.d/supervisor
+    src: etc/init/supervisor.j2
+    dest: /etc/init/supervisor.conf
     owner: "{{ supervisor_system_user }}"
     group: "{{ supervisor_system_group }}"
     mode: 0755
